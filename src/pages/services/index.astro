@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceTier from '../../components/ServiceTier.astro';
+import { getCollection } from 'astro:content';
+
+const services = (await getCollection('services', ({ data }) => data.published !== false))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Services — AnEvergreene Studio" description="Get a beautiful personal website without touching code.">
+  <h1 class="text-4xl font-heading font-bold mb-4">Your site, without the stress.</h1>
+  <p class="text-text-secondary mb-10 max-w-2xl">
+    You have things to share with the world. I'll handle the tech so you can focus on what actually matters to you.
+  </p>
+
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-16">
+    {services.map((service, i) => (
+      <ServiceTier
+        title={service.data.title}
+        description={service.data.description}
+        price={service.data.price}
+        features={service.data.features}
+        cta_text={service.data.cta_text}
+        cta_url={service.data.cta_url}
+        highlighted={i === 0}
+      />
+    ))}
+  </div>
+
+  <section class="rounded-xl border border-border bg-surface p-8 sm:p-12 text-center">
+    <h2 class="text-2xl font-heading font-semibold">Something else in mind?</h2>
+    <p class="mt-3 text-text-secondary max-w-xl">
+      Every project is different. If these don't quite fit, let's talk — I'd rather build something that actually works for you than squeeze you into a box.
+    </p>
+    <a href="/contact/" class="mt-6 inline-block px-6 py-3 border border-accent text-accent rounded-lg font-medium hover:bg-accent hover:text-bg transition-all duration-300">
+      Reach out &rarr;
+    </a>
+  </section>
+</BaseLayout>

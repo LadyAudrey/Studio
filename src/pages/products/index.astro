@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+
+const products = (await getCollection('products', ({ data }) => data.published !== false))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Products — AnEvergreene Studio" description="Tools and apps built with care, designed for calm.">
+  <h1 class="text-4xl font-heading font-bold mb-4">Products</h1>
+  <p class="text-text-secondary mb-10 max-w-2xl">
+    Everything we build starts with the same question: does this respect the person using it? Here's what's growing in the forest.
+  </p>
+
+  <div class="grid gap-6 sm:grid-cols-2">
+    {products.map((product) => (
+      <ProductCard
+        title={product.data.title}
+        description={product.data.description}
+        href={`/products/${product.slug}/`}
+        logo={product.data.logo}
+        status={product.data.status}
+        pricing={product.data.pricing}
+      />
+    ))}
+  </div>
+</BaseLayout>

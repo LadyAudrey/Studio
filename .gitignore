@@ -1,0 +1,29 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# Claude local settings (may contain machine-specific config)
+.claude/settings.local.json
+
+# ──────────────────────────────────────────────
+# Private content — stays on your machine only
+# ──────────────────────────────────────────────
+src/private/

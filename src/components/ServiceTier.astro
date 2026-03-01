@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  price?: string;
+  features: string[];
+  cta_text: string;
+  cta_url?: string;
+  highlighted?: boolean;
+}
+
+const { title, description, price, features, cta_text, cta_url = '/contact/', highlighted = false } = Astro.props;
+---
+
+<div class:list={[
+  'rounded-xl border p-8 flex flex-col transition-all duration-300',
+  highlighted
+    ? 'border-accent bg-surface shadow-md'
+    : 'border-border bg-surface',
+]}>
+  <h3 class="text-xl font-heading font-semibold">{title}</h3>
+  {description && <p class="mt-2 text-sm text-text-secondary">{description}</p>}
+  {price && (
+    <p class="mt-4 text-2xl font-semibold text-accent">{price}</p>
+  )}
+  <ul class="mt-6 space-y-3 flex-1">
+    {features.map((feature) => (
+      <li class="flex items-start gap-2 text-sm text-text-secondary">
+        <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        {feature}
+      </li>
+    ))}
+  </ul>
+  <a
+    href={cta_url}
+    class:list={[
+      'mt-8 block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300',
+      highlighted
+        ? 'bg-accent text-bg hover:opacity-90'
+        : 'border border-accent text-accent hover:bg-accent hover:text-bg',
+    ]}
+  >
+    {cta_text}
+  </a>
+</div>

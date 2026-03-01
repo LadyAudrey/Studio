@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Theme tokens === */
+:root {
+  /* Backgrounds — warm cream */
+  --color-bg:           #faf7f2;   /* warm cream */
+  --color-bg-secondary: #f2ece1;   /* sand-100 */
+  --color-bg-accent:    #fdf3ee;   /* warm peach tint */
+  --color-bg-muted:     #ebe7e2;   /* warm gray */
+
+  /* Text — deep navy for connection to dark mode */
+  --color-text:           #121a2e; /* deep navy */
+  --color-text-secondary: #2a3654; /* navy-700 */
+  --color-text-muted:     #5c6680; /* muted slate */
+
+  /* Interactive / accent — warm amber-orange */
+  --color-accent:       #c47a3a;   /* rich amber — darker for light bg */
+  --color-accent-hover: #a86530;   /* deeper amber on hover */
+
+  /* Borders */
+  --color-border: #d6cfc7;        /* warm gray */
+
+  /* Surfaces (cards, etc.) */
+  --color-surface:       #ffffff;
+  --color-surface-hover: #f2ece1;  /* sand-100 */
+
+  /* Tags */
+  --color-tag-bg:   #fae8dc;      /* warm amber bg */
+  --color-tag-text: #a86530;      /* amber text */
+
+  /* Gradients */
+  --gradient-warm: linear-gradient(135deg, #c47a3a, #d4c4a6);
+  --gradient-deep: linear-gradient(135deg, #121a2e, #2a3654);
+}
+
+.dark {
+  /* Backgrounds — deep midnight navy, warm-leaning */
+  --color-bg:           #0e1525;   /* midnight navy */
+  --color-bg-secondary: #141c30;   /* slightly lighter */
+  --color-bg-accent:    #1a1810;   /* warm amber tint for accent areas */
+  --color-bg-muted:     #1a2238;   /* muted navy */
+
+  /* Text — warm cream, not stark white */
+  --color-text:           #f5f0e6; /* warm cream */
+  --color-text-secondary: #e0d8c8; /* muted cream */
+  --color-text-muted:     #8a9ab4; /* slate blue-gray */
+
+  /* Interactive / accent — warm amber-orange */
+  --color-accent:       #e8945a;   /* warm amber — sunset orange */
+  --color-accent-hover: #f0a870;   /* lighter amber on hover */
+
+  /* Borders */
+  --color-border: #1e2a44;        /* navy border */
+
+  /* Surfaces (cards, etc.) */
+  --color-surface:       #131b2e;  /* navy surface */
+  --color-surface-hover: #1a2440;  /* lighter navy on hover */
+
+  /* Tags */
+  --color-tag-bg:   #2a1e10;      /* dark amber bg */
+  --color-tag-text: #e8945a;      /* amber text */
+
+  /* Gradients — amber meeting cream */
+  --gradient-warm: linear-gradient(135deg, #e8945a, #d4c4a6);
+  --gradient-deep: linear-gradient(135deg, #e8945a, #f5f0e6);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text antialiased;
+    position: relative;
+  }
+
+  /* Organic noise texture overlay — subtler than Forest */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 300px 300px;
+    mix-blend-mode: multiply;
+  }
+
+  /* Subtle depth gradient */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      160deg,
+      transparent 0%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.04) 70%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+  }
+
+  .dark body::after {
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.01) 0%,
+      transparent 30%,
+      transparent 60%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  }
+
+  /* Content sits above the texture layers */
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Prose styling for content pages */
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose h1 {
+    @apply text-3xl font-bold mb-6 mt-8;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-semibold mb-4 mt-6;
+  }
+
+  .prose h3 {
+    @apply text-xl font-semibold mb-3 mt-5;
+  }
+
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .prose ul, .prose ol {
+    @apply mb-4 pl-6;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose ul li {
+    @apply list-disc;
+  }
+
+  .prose ol li {
+    @apply list-decimal;
+  }
+
+  .prose a {
+    @apply text-accent underline hover:text-accent-hover;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-accent pl-4 italic my-4 text-text-secondary;
+  }
+
+  .prose code {
+    @apply bg-bg-muted px-1.5 py-0.5 rounded text-sm;
+  }
+
+  .prose pre {
+    @apply bg-warmgray-950 text-sand-100 p-4 rounded-lg overflow-x-auto my-4;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose img {
+    @apply rounded-lg my-6;
+  }
+
+  .prose hr {
+    @apply my-8 border-border;
+  }
+}
+
+/* === Page transition — gentle fade === */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+::view-transition-old(root) {
+  animation: fade-out 400ms ease-out;
+}
+::view-transition-new(root) {
+  animation: fade-in 400ms ease-in;
+}
+
+/* === Subtle hover transitions (no glow) === */
+@layer components {
+  /* Cards — border color shift + slight lift */
+  a.group {
+    transition: border-color 300ms ease, transform 300ms ease;
+  }
+  a.group:hover, a.group:focus-visible {
+    transform: translateY(-2px);
+  }
+}

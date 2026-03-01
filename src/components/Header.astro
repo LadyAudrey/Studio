@@ -1,0 +1,80 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const navItems = [
+  { label: 'Products', href: '/products/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Contact', href: '/contact/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-bg/90 backdrop-blur-md shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="font-heading italic text-2xl text-accent hover:opacity-80 transition-opacity duration-300">
+        AnEvergreene Studio
+      </a>
+
+      <!-- Desktop navigation + theme toggle -->
+      <div class="hidden sm:flex items-center gap-4">
+        <nav class="flex items-center gap-6">
+          {navItems.map(({ label, href }) => (
+            <a
+              href={href}
+              class:list={[
+                'text-sm font-medium transition-colors duration-300',
+                (currentPath === href || (href !== '/' && currentPath.startsWith(href)))
+                  ? 'text-accent'
+                  : 'text-text-secondary hover:text-text',
+              ]}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+        <ThemeToggle />
+      </div>
+
+      <!-- Mobile: theme toggle + menu button -->
+      <div class="sm:hidden flex items-center gap-2">
+        <ThemeToggle />
+        <button
+          id="mobile-menu-btn"
+          class="p-2 text-text-muted rounded-lg"
+          aria-label="Toggle menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile navigation -->
+    <nav id="mobile-menu" class="sm:hidden hidden pb-6 pt-2 space-y-1">
+      {navItems.map(({ label, href }) => (
+        <a
+          href={href}
+          class:list={[
+            'block py-3 px-3 text-base font-medium transition-colors duration-300 rounded-lg',
+            (currentPath === href || (href !== '/' && currentPath.startsWith(href)))
+              ? 'text-accent'
+              : 'text-text-secondary hover:text-text',
+          ]}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>

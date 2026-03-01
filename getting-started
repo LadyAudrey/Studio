@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "=== AnEvergreene Studio — Getting Started ==="
+echo ""
+
+# Check for Node.js
+if ! command -v node &> /dev/null; then
+    echo "Node.js is not installed."
+    echo "Download it from https://nodejs.org/ (LTS version recommended)"
+    echo "Then run this script again."
+    exit 1
+fi
+
+echo "Node.js found: $(node --version)"
+echo ""
+
+# Install dependencies
+echo "Installing dependencies..."
+npm install
+
+echo ""
+echo "All set! Run ./go to open your site."
