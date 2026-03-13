@@ -27,3 +27,8 @@ Thumbs.db
 # Private content — stays on your machine only
 # ──────────────────────────────────────────────
 src/private/
+
+# ──────────────────────────────────────────────
+# Inkscape source files (working files, not for deploy)
+# ──────────────────────────────────────────────
+public/images/Inkscape/

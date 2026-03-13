@@ -2,8 +2,8 @@
 import ThemeToggle from './ThemeToggle.astro';
 
 const navItems = [
-  { label: 'Products', href: '/products/' },
   { label: 'Services', href: '/services/' },
+  { label: 'Gallery', href: 'https://ladyaudrey.github.io/Forest/', external: true },
   { label: 'Blog', href: '/blog/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
@@ -22,12 +22,13 @@ const currentPath = Astro.url.pathname;
       <!-- Desktop navigation + theme toggle -->
       <div class="hidden sm:flex items-center gap-4">
         <nav class="flex items-center gap-6">
-          {navItems.map(({ label, href }) => (
+          {navItems.map(({ label, href, external }) => (
             <a
               href={href}
+              {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               class:list={[
                 'text-sm font-medium transition-colors duration-300',
-                (currentPath === href || (href !== '/' && currentPath.startsWith(href)))
+                (!external && (currentPath === href || (href !== '/' && currentPath.startsWith(href))))
                   ? 'text-accent'
                   : 'text-text-secondary hover:text-text',
               ]}
@@ -56,12 +57,13 @@ const currentPath = Astro.url.pathname;
 
     <!-- Mobile navigation -->
     <nav id="mobile-menu" class="sm:hidden hidden pb-6 pt-2 space-y-1">
-      {navItems.map(({ label, href }) => (
+      {navItems.map(({ label, href, external }) => (
         <a
           href={href}
+          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           class:list={[
             'block py-3 px-3 text-base font-medium transition-colors duration-300 rounded-lg',
-            (currentPath === href || (href !== '/' && currentPath.startsWith(href)))
+            (!external && (currentPath === href || (href !== '/' && currentPath.startsWith(href))))
               ? 'text-accent'
               : 'text-text-secondary hover:text-text',
           ]}

@@ -3,8 +3,8 @@ title: "YourNest"
 description: "A personal website template designed for nontechies. Your words, your site, your nest."
 date: 2026-02-28
 tags: ["website", "template", "personal site", "astro", "no-code"]
-published: true
-featured: true
+published: false
+featured: false
 status: "beta"
 pricing: "paid"
 order: 1

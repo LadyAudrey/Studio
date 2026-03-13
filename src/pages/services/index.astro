@@ -3,8 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ServiceTier from '../../components/ServiceTier.astro';
 import { getCollection } from 'astro:content';
 
-const services = (await getCollection('services', ({ data }) => data.published !== false))
+const allServices = (await getCollection('services', ({ data }) => data.published !== false))
   .sort((a, b) => a.data.order - b.data.order);
+
+const websiteServices = allServices.filter(s => s.data.tier === 'starter' || s.data.tier === 'growth');
+const otherServices = allServices.filter(s => s.data.tier !== 'starter' && s.data.tier !== 'growth');
 ---
 
 <BaseLayout title="Services — AnEvergreene Studio" description="Get a beautiful personal website without touching code.">
@@ -13,8 +16,8 @@ const services = (await getCollection('services', ({ data }) => data.published !
     You have things to share with the world. I'll handle the tech so you can focus on what actually matters to you.
   </p>
 
-  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-16">
-    {services.map((service, i) => (
+  <div class="grid gap-8 lg:grid-cols-2 mb-8">
+    {websiteServices.map((service, i) => (
       <ServiceTier
         title={service.data.title}
         description={service.data.description}
@@ -26,6 +29,24 @@ const services = (await getCollection('services', ({ data }) => data.published !
       />
     ))}
   </div>
+
+  {otherServices.length > 0 && (
+    <div class="mb-16 space-y-8">
+      {otherServices.map((service) => (
+        <ServiceTier
+          title={service.data.title}
+          description={service.data.description}
+          price={service.data.price}
+          features={service.data.features}
+          cta_text={service.data.cta_text}
+          cta_url={service.data.cta_url}
+          wide={true}
+          example_url={service.slug === 'newsletter' ? 'https://anevergreene.beehiiv.com' : undefined}
+          example_label={service.slug === 'newsletter' ? 'See my newsletter' : undefined}
+        />
+      ))}
+    </div>
+  )}
 
   <section class="rounded-xl border border-border bg-surface p-8 sm:p-12 text-center">
     <h2 class="text-2xl font-heading font-semibold">Something else in mind?</h2>

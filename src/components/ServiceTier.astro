@@ -7,41 +7,55 @@ interface Props {
   cta_text: string;
   cta_url?: string;
   highlighted?: boolean;
+  wide?: boolean;
+  example_url?: string;
+  example_label?: string;
 }
 
-const { title, description, price, features, cta_text, cta_url = '/contact/', highlighted = false } = Astro.props;
+const { title, description, price, features, cta_text, cta_url = '/contact/', highlighted = false, wide = false, example_url, example_label } = Astro.props;
 ---
 
 <div class:list={[
-  'rounded-xl border p-8 flex flex-col transition-all duration-300',
+  'rounded-xl border p-8 transition-all duration-300',
   highlighted
     ? 'border-accent bg-surface shadow-md'
     : 'border-border bg-surface',
+  wide ? 'flex flex-col lg:flex-row lg:gap-12' : 'flex flex-col',
 ]}>
-  <h3 class="text-xl font-heading font-semibold">{title}</h3>
-  {description && <p class="mt-2 text-sm text-text-secondary">{description}</p>}
-  {price && (
-    <p class="mt-4 text-2xl font-semibold text-accent">{price}</p>
-  )}
-  <ul class="mt-6 space-y-3 flex-1">
-    {features.map((feature) => (
-      <li class="flex items-start gap-2 text-sm text-text-secondary">
-        <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-        </svg>
-        {feature}
-      </li>
-    ))}
-  </ul>
-  <a
-    href={cta_url}
-    class:list={[
-      'mt-8 block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300',
-      highlighted
-        ? 'bg-accent text-bg hover:opacity-90'
-        : 'border border-accent text-accent hover:bg-accent hover:text-bg',
-    ]}
-  >
-    {cta_text}
-  </a>
+  <div class:list={[wide ? 'lg:flex-1' : '']}>
+    <h3 class="text-xl font-heading font-semibold">{title}</h3>
+    {description && <p class="mt-2 text-sm text-text-secondary">{description}</p>}
+    {price && (
+      <p class="mt-4 text-2xl font-semibold text-accent">{price}</p>
+    )}
+    {example_url && (
+      <a href={example_url} target="_blank" rel="noopener noreferrer" class="mt-3 inline-block text-sm text-accent hover:text-accent-hover transition-colors duration-300">
+        {example_label || 'See an example'} &rarr;
+      </a>
+    )}
+  </div>
+  <div class:list={[wide ? 'lg:flex-1 lg:flex lg:flex-col' : 'flex flex-col flex-1']}>
+    <ul class:list={['mt-6 space-y-3 flex-1', wide ? 'lg:mt-0' : '']}>
+      {features.map((feature) => (
+        <li class="flex items-start gap-2 text-sm text-text-secondary">
+          <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          {feature}
+        </li>
+      ))}
+    </ul>
+    <a
+      href={cta_url}
+      class:list={[
+        'mt-8 block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300',
+        highlighted
+          ? 'bg-accent text-bg hover:opacity-90'
+          : 'border border-accent text-accent hover:bg-accent hover:text-bg',
+        wide ? 'lg:max-w-xs' : '',
+      ]}
+    >
+      {cta_text}
+    </a>
+  </div>
 </div>

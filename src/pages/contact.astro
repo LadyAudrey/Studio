@@ -3,56 +3,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Contact — AnEvergreene Studio" description="Get in touch with AnEvergreene Studio.">
-  <h1 class="text-4xl font-heading font-bold mb-4">Contact</h1>
-  <p class="text-text-secondary mb-10 max-w-2xl">
-    Whether you're interested in a service, want to collaborate, or just want to say hello — here's how to reach Audrey.
+  <h1 class="text-4xl font-heading font-bold mb-4">Get in touch</h1>
+  <p class="text-text-secondary mb-10 max-w-xl">
+    Whether you're interested in a website, want to collaborate, or just want to say hello.
   </p>
 
-  <div class="grid gap-8 sm:grid-cols-2 max-w-2xl">
-    <div class="rounded-xl border border-border bg-surface p-6">
-      <h2 class="text-lg font-heading font-semibold mb-3">Email</h2>
-      <p class="text-text-secondary text-sm">
-        The best way to reach me for services or collaboration.
-      </p>
-      <p class="mt-3 text-accent">
-        <!-- Replace with your actual email -->
-        hello@audreyevergreene.me
-      </p>
-    </div>
+  <div class="max-w-xl space-y-8">
+    <!-- Contact form -->
+    <form
+      action="https://formspree.io/f/xaqpbjry"
+      method="POST"
+      target="_blank"
+      class="rounded-xl border border-accent bg-surface p-8 space-y-6"
+    >
+      <div>
+        <label for="name" class="block text-sm font-medium text-text-secondary mb-1">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full rounded-lg border border-border bg-bg px-4 py-2 text-text placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300"
+          placeholder="Your name"
+        />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-text-secondary mb-1">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          required
+          class="w-full rounded-lg border border-border bg-bg px-4 py-2 text-text placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300"
+          placeholder="you@example.com"
+        />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-text-secondary mb-1">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="w-full rounded-lg border border-border bg-bg px-4 py-2 text-text placeholder:text-text-muted focus:border-accent focus:outline-none transition-colors duration-300 resize-y"
+          placeholder="What's on your mind?"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="px-6 py-3 bg-accent text-bg rounded-lg font-medium hover:opacity-90 transition-opacity duration-300"
+      >
+        Send message
+      </button>
+    </form>
 
-    <div class="rounded-xl border border-border bg-surface p-6">
-      <h2 class="text-lg font-heading font-semibold mb-3">Newsletter</h2>
-      <p class="text-text-secondary text-sm">
-        Updates on new products, behind-the-scenes process, and creative writing.
-      </p>
-      <a href="https://audreys-evergreene-newsletter.beehiiv.com/"
+    <!-- Secondary links -->
+    <div class="flex flex-col sm:flex-row gap-6">
+      <a href="https://anevergreene.beehiiv.com/"
         target="_blank" rel="noopener noreferrer"
-        class="mt-3 inline-block text-accent hover:text-accent-hover transition-colors duration-300">
-        Subscribe on Beehiiv &rarr;
+        class="flex-1 rounded-xl border border-border bg-surface p-6 hover:border-accent transition-colors duration-300 group">
+        <h2 class="text-lg font-heading font-semibold mb-1">Newsletter</h2>
+        <p class="text-text-muted text-sm">Updates, process, and creative writing.</p>
       </a>
-    </div>
-
-    <div class="rounded-xl border border-border bg-surface p-6">
-      <h2 class="text-lg font-heading font-semibold mb-3">GitHub</h2>
-      <p class="text-text-secondary text-sm">
-        Open source projects and contributions.
-      </p>
       <a href="https://github.com/LadyAudrey"
         target="_blank" rel="noopener noreferrer"
-        class="mt-3 inline-block text-accent hover:text-accent-hover transition-colors duration-300">
-        @LadyAudrey &rarr;
-      </a>
-    </div>
-
-    <div class="rounded-xl border border-border bg-surface p-6">
-      <h2 class="text-lg font-heading font-semibold mb-3">Creative work</h2>
-      <p class="text-text-secondary text-sm">
-        Stories, poetry, and art live over in the Forest.
-      </p>
-      <a href="https://ladyaudrey.github.io/Forest/"
-        target="_blank" rel="noopener noreferrer"
-        class="mt-3 inline-block text-accent hover:text-accent-hover transition-colors duration-300">
-        Visit Forest &rarr;
+        class="flex-1 rounded-xl border border-border bg-surface p-6 hover:border-accent transition-colors duration-300 group">
+        <h2 class="text-lg font-heading font-semibold mb-1">GitHub</h2>
+        <p class="text-text-muted text-sm">Open source projects and contributions.</p>
       </a>
     </div>
   </div>
