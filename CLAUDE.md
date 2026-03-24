@@ -73,7 +73,7 @@ All AI-touched files need both:
 
 ## Configuration
 
-- `astro.config.mjs` — site: `https://audreyevergreene.me`, base: `/`
+- `astro.config.mjs` — site: `https://ladyaudrey.github.io`, base: `/Studio/`
 - `tailwind.config.mjs` — color palette, fonts, semantic tokens
 - `src/components/Header.astro` — site name and navigation
 - `src/components/Footer.astro` — footer
@@ -111,5 +111,6 @@ npm run preview # preview production build locally
 
 ## Important
 
-- Custom domain: `audreyevergreene.me` (CNAME file in `public/`)
-- Base path is `/` — no path prefix gymnastics needed
+- Currently served at `https://ladyaudrey.github.io/Studio/`
+- Custom domain `audreyevergreene.me` reserved (CNAME in `public/`) — not yet connected
+- Base path is `/Studio/` — must match the GitHub repo name
