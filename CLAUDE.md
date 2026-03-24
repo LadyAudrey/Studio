@@ -101,10 +101,6 @@ npm run preview # preview production build locally
     </a>
   </div>
   ```
-- **Formspree contact form not delivering email** — form submits successfully
-  and opens confirmation in a new tab, but emails aren't arriving at
-  `anevergreene@proton.me`. Needs debugging — check Formspree dashboard at
-  formspree.io for submission logs and verify the email is confirmed.
 - **Inkscape source files** — treeline logo working files live in
   `public/images/Inkscape/` (git-ignored). If the final SVGs need to be
   committed for the site, export clean versions to `public/images/` instead.

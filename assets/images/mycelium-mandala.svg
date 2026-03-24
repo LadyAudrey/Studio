@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     viewBox="0 0 600 600" width="600" height="600">
+
+  <!-- ============================================= -->
+  <!-- RINGS — concentric circles as the skeleton    -->
+  <!-- ============================================= -->
+  <g inkscape:label="Rings" id="rings">
+    <circle id="ring-inner"  inkscape:label="Inner ring"
+            cx="300" cy="300" r="60"
+            fill="none" stroke="#567d45" stroke-width="1.5" stroke-opacity="0.3"/>
+    <circle id="ring-middle" inkscape:label="Middle ring"
+            cx="300" cy="300" r="140"
+            fill="none" stroke="#567d45" stroke-width="1.2" stroke-opacity="0.25"/>
+    <circle id="ring-outer"  inkscape:label="Outer ring"
+            cx="300" cy="300" r="230"
+            fill="none" stroke="#567d45" stroke-width="1" stroke-opacity="0.2"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- SPOKES — radial filaments from center outward  -->
+  <!-- 8 spokes, evenly spaced but with organic curves -->
+  <!-- ============================================= -->
+  <g inkscape:label="Spokes" id="spokes" fill="none" stroke="#729a5e" stroke-linecap="round">
+    <!-- North -->
+    <path id="spoke-n"  inkscape:label="Spoke north"
+          d="M 300,240 C 298,200 295,160 300,70"
+          stroke-width="2" stroke-opacity="0.4"/>
+    <!-- Northeast -->
+    <path id="spoke-ne" inkscape:label="Spoke northeast"
+          d="M 342,258 C 370,230 400,195 462,138"
+          stroke-width="2" stroke-opacity="0.4"/>
+    <!-- East -->
+    <path id="spoke-e"  inkscape:label="Spoke east"
+          d="M 360,300 C 400,298 440,303 530,300"
+          stroke-width="2" stroke-opacity="0.4"/>
+    <!-- Southeast -->
+    <path id="spoke-se" inkscape:label="Spoke southeast"
+          d="M 342,342 C 375,370 398,405 462,462"
+          stroke-width="2" stroke-opacity="0.4"/>
+    <!-- South -->
+    <path id="spoke-s"  inkscape:label="Spoke south"
+          d="M 300,360 C 302,400 297,440 300,530"
+          stroke-width="2" stroke-opacity="0.4"/>
+    <!-- Southwest -->
+    <path id="spoke-sw" inkscape:label="Spoke southwest"
+          d="M 258,342 C 228,372 198,402 138,462"
+          stroke-width="2" stroke-opacity="0.4"/>
+    <!-- West -->
+    <path id="spoke-w"  inkscape:label="Spoke west"
+          d="M 240,300 C 200,302 160,297 70,300"
+          stroke-width="2" stroke-opacity="0.4"/>
+    <!-- Northwest -->
+    <path id="spoke-nw" inkscape:label="Spoke northwest"
+          d="M 258,258 C 230,228 195,198 138,138"
+          stroke-width="2" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- BRANCHES — organic offshoots from the spokes   -->
+  <!-- These break the strict symmetry                -->
+  <!-- ============================================= -->
+  <g inkscape:label="Branches" id="branches" fill="none" stroke="#729a5e" stroke-linecap="round">
+    <path id="branch-n-east"  inkscape:label="North branch east"
+          d="M 299,180 C 320,165 345,158 370,150"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-n-west"  inkscape:label="North branch west"
+          d="M 298,160 C 275,148 250,145 225,140"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-ne-out"  inkscape:label="Northeast branch out"
+          d="M 390,200 C 410,210 430,205 450,195"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-e-up"    inkscape:label="East branch up"
+          d="M 440,298 C 450,275 460,255 475,240"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-e-down"  inkscape:label="East branch down"
+          d="M 460,303 C 468,325 475,345 480,365"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-se-out"  inkscape:label="Southeast branch out"
+          d="M 395,400 C 415,392 432,398 450,410"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-s-west"  inkscape:label="South branch west"
+          d="M 301,430 C 278,440 255,438 235,445"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-sw-out"  inkscape:label="Southwest branch out"
+          d="M 205,400 C 188,410 175,398 155,405"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-w-up"    inkscape:label="West branch up"
+          d="M 160,297 C 148,278 140,260 130,240"
+          stroke-width="1" stroke-opacity="0.3"/>
+    <path id="branch-nw-out"  inkscape:label="Northwest branch out"
+          d="M 210,205 C 195,190 185,200 165,195"
+          stroke-width="1" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- NODES — junction points where paths cross      -->
+  <!-- ============================================= -->
+  <g inkscape:label="Nodes" id="nodes">
+    <!-- Center -->
+    <circle id="node-center" inkscape:label="Center node"
+            cx="300" cy="300" r="5" fill="#bdd4b0" opacity="0.8"/>
+
+    <!-- Inner ring nodes (on the spokes) -->
+    <circle id="node-inner-n"  inkscape:label="Inner north"  cx="300" cy="240" r="3.5" fill="#96b884" opacity="0.7"/>
+    <circle id="node-inner-ne" inkscape:label="Inner NE"     cx="342" cy="258" r="3" fill="#96b884" opacity="0.65"/>
+    <circle id="node-inner-e"  inkscape:label="Inner east"   cx="360" cy="300" r="3.5" fill="#96b884" opacity="0.7"/>
+    <circle id="node-inner-se" inkscape:label="Inner SE"     cx="342" cy="342" r="3" fill="#96b884" opacity="0.65"/>
+    <circle id="node-inner-s"  inkscape:label="Inner south"  cx="300" cy="360" r="3.5" fill="#96b884" opacity="0.7"/>
+    <circle id="node-inner-sw" inkscape:label="Inner SW"     cx="258" cy="342" r="3" fill="#96b884" opacity="0.65"/>
+    <circle id="node-inner-w"  inkscape:label="Inner west"   cx="240" cy="300" r="3.5" fill="#96b884" opacity="0.7"/>
+    <circle id="node-inner-nw" inkscape:label="Inner NW"     cx="258" cy="258" r="3" fill="#96b884" opacity="0.65"/>
+  </g>
+</svg>

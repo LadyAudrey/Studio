@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     viewBox="0 0 800 400" width="800" height="400">
+
+  <!-- ============================================= -->
+  <!-- MAIN STRANDS — the big sweeping paths          -->
+  <!-- Each one is a single curve you can grab & bend -->
+  <!-- ============================================= -->
+  <g inkscape:label="Strands" id="strands">
+    <path id="strand-center"    inkscape:label="Center strand"
+          d="M 80,200 C 200,180 350,220 500,190 S 680,170 750,200"
+          fill="none" stroke="#567d45" stroke-width="2.5" stroke-opacity="0.5" stroke-linecap="round"/>
+
+    <path id="strand-upper"     inkscape:label="Upper strand"
+          d="M 100,120 C 220,100 380,140 520,110 S 680,90 740,120"
+          fill="none" stroke="#567d45" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round"/>
+
+    <path id="strand-lower"     inkscape:label="Lower strand"
+          d="M 60,300 C 180,280 340,310 480,280 S 660,260 750,290"
+          fill="none" stroke="#567d45" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- BRIDGES — thin lines connecting the strands    -->
+  <!-- ============================================= -->
+  <g inkscape:label="Bridges" id="bridges">
+    <path id="bridge-left"      inkscape:label="Left bridge"
+          d="M 200,185 C 210,160 220,140 230,115"
+          fill="none" stroke="#729a5e" stroke-width="1.2" stroke-opacity="0.35" stroke-linecap="round"/>
+
+    <path id="bridge-center"    inkscape:label="Center bridge"
+          d="M 420,195 C 430,170 440,145 450,120"
+          fill="none" stroke="#729a5e" stroke-width="1.2" stroke-opacity="0.35" stroke-linecap="round"/>
+
+    <path id="bridge-right"     inkscape:label="Right bridge"
+          d="M 620,185 C 635,160 650,135 660,115"
+          fill="none" stroke="#729a5e" stroke-width="1.2" stroke-opacity="0.35" stroke-linecap="round"/>
+
+    <path id="bridge-low-left"  inkscape:label="Lower-left bridge"
+          d="M 230,280 C 225,255 215,230 205,195"
+          fill="none" stroke="#729a5e" stroke-width="1.2" stroke-opacity="0.35" stroke-linecap="round"/>
+
+    <path id="bridge-low-right" inkscape:label="Lower-right bridge"
+          d="M 560,280 C 555,255 545,225 535,195"
+          fill="none" stroke="#729a5e" stroke-width="1.2" stroke-opacity="0.35" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- NODES — glowing dots where paths meet          -->
+  <!-- Each node is one circle with a glow + a dot    -->
+  <!-- ============================================= -->
+  <g inkscape:label="Nodes" id="nodes">
+    <circle id="node-left"   inkscape:label="Left node"    cx="210" cy="190" r="4" fill="#96b884" opacity="0.7"/>
+    <circle id="node-center" inkscape:label="Center node"  cx="430" cy="190" r="5" fill="#bdd4b0" opacity="0.8"/>
+    <circle id="node-right"  inkscape:label="Right node"   cx="620" cy="185" r="4" fill="#96b884" opacity="0.7"/>
+    <circle id="node-top-l"  inkscape:label="Top-left node"    cx="230" cy="115" r="3" fill="#96b884" opacity="0.6"/>
+    <circle id="node-top-c"  inkscape:label="Top-center node"  cx="450" cy="118" r="3" fill="#96b884" opacity="0.6"/>
+    <circle id="node-top-r"  inkscape:label="Top-right node"   cx="660" cy="112" r="3" fill="#96b884" opacity="0.6"/>
+    <circle id="node-bot-l"  inkscape:label="Bottom-left node"  cx="230" cy="285" r="3" fill="#96b884" opacity="0.6"/>
+    <circle id="node-bot-r"  inkscape:label="Bottom-right node" cx="560" cy="282" r="3" fill="#96b884" opacity="0.6"/>
+  </g>
+</svg>

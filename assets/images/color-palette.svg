@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     viewBox="0 0 720 520" width="720" height="520">
+
+  <rect width="720" height="520" fill="#181614"/>
+
+  <!-- ========== FOREST ========== -->
+  <g inkscape:label="Forest greens" id="forest">
+    <rect id="forest-50"  inkscape:label="forest-50  #f0f5ee" x="20"  y="20" width="60" height="60" rx="6" fill="#f0f5ee"/>
+    <rect id="forest-100" inkscape:label="forest-100 #dde8d6" x="90"  y="20" width="60" height="60" rx="6" fill="#dde8d6"/>
+    <rect id="forest-200" inkscape:label="forest-200 #bdd4b0" x="160" y="20" width="60" height="60" rx="6" fill="#bdd4b0"/>
+    <rect id="forest-300" inkscape:label="forest-300 #96b884" x="230" y="20" width="60" height="60" rx="6" fill="#96b884"/>
+    <rect id="forest-400" inkscape:label="forest-400 #729a5e" x="300" y="20" width="60" height="60" rx="6" fill="#729a5e"/>
+    <rect id="forest-500" inkscape:label="forest-500 #567d45" x="370" y="20" width="60" height="60" rx="6" fill="#567d45"/>
+    <rect id="forest-600" inkscape:label="forest-600 #446338" x="440" y="20" width="60" height="60" rx="6" fill="#446338"/>
+    <rect id="forest-700" inkscape:label="forest-700 #344c2b" x="510" y="20" width="60" height="60" rx="6" fill="#344c2b"/>
+    <rect id="forest-800" inkscape:label="forest-800 #263820" x="580" y="20" width="60" height="60" rx="6" fill="#263820"/>
+    <rect id="forest-900" inkscape:label="forest-900 #1a2716" x="650" y="20" width="60" height="60" rx="6" fill="#1a2716"/>
+  </g>
+
+  <!-- ========== COPPER ========== -->
+  <g inkscape:label="Coppers" id="copper">
+    <rect id="copper-50"  inkscape:label="copper-50  #fdf5f0" x="20"  y="100" width="60" height="60" rx="6" fill="#fdf5f0"/>
+    <rect id="copper-100" inkscape:label="copper-100 #fae8dc" x="90"  y="100" width="60" height="60" rx="6" fill="#fae8dc"/>
+    <rect id="copper-200" inkscape:label="copper-200 #f2ccb2" x="160" y="100" width="60" height="60" rx="6" fill="#f2ccb2"/>
+    <rect id="copper-300" inkscape:label="copper-300 #e5ad85" x="230" y="100" width="60" height="60" rx="6" fill="#e5ad85"/>
+    <rect id="copper-400" inkscape:label="copper-400 #c8845a" x="300" y="100" width="60" height="60" rx="6" fill="#c8845a"/>
+    <rect id="copper-500" inkscape:label="copper-500 #b06d42" x="370" y="100" width="60" height="60" rx="6" fill="#b06d42"/>
+    <rect id="copper-600" inkscape:label="copper-600 #9c5d3e" x="440" y="100" width="60" height="60" rx="6" fill="#9c5d3e"/>
+    <rect id="copper-700" inkscape:label="copper-700 #7a4730" x="510" y="100" width="60" height="60" rx="6" fill="#7a4730"/>
+    <rect id="copper-800" inkscape:label="copper-800 #5c3524" x="580" y="100" width="60" height="60" rx="6" fill="#5c3524"/>
+    <rect id="copper-900" inkscape:label="copper-900 #40251a" x="650" y="100" width="60" height="60" rx="6" fill="#40251a"/>
+  </g>
+
+  <!-- ========== SAND ========== -->
+  <g inkscape:label="Sands" id="sand">
+    <rect id="sand-50"  inkscape:label="sand-50  #faf7f2" x="20"  y="180" width="60" height="60" rx="6" fill="#faf7f2"/>
+    <rect id="sand-100" inkscape:label="sand-100 #f2ece1" x="90"  y="180" width="60" height="60" rx="6" fill="#f2ece1"/>
+    <rect id="sand-200" inkscape:label="sand-200 #e6dbc8" x="160" y="180" width="60" height="60" rx="6" fill="#e6dbc8"/>
+    <rect id="sand-300" inkscape:label="sand-300 #d4c4a6" x="230" y="180" width="60" height="60" rx="6" fill="#d4c4a6"/>
+    <rect id="sand-400" inkscape:label="sand-400 #c1ab84" x="300" y="180" width="60" height="60" rx="6" fill="#c1ab84"/>
+    <rect id="sand-500" inkscape:label="sand-500 #ab926a" x="370" y="180" width="60" height="60" rx="6" fill="#ab926a"/>
+    <rect id="sand-600" inkscape:label="sand-600 #8a7454" x="440" y="180" width="60" height="60" rx="6" fill="#8a7454"/>
+    <rect id="sand-700" inkscape:label="sand-700 #6b5940" x="510" y="180" width="60" height="60" rx="6" fill="#6b5940"/>
+    <rect id="sand-800" inkscape:label="sand-800 #504330" x="580" y="180" width="60" height="60" rx="6" fill="#504330"/>
+    <rect id="sand-900" inkscape:label="sand-900 #382e22" x="650" y="180" width="60" height="60" rx="6" fill="#382e22"/>
+  </g>
+
+  <!-- ========== TERRACOTTA ========== -->
+  <g inkscape:label="Terracottas" id="terracotta">
+    <rect id="terra-50"  inkscape:label="terra-50  #fdf3ee" x="20"  y="260" width="60" height="60" rx="6" fill="#fdf3ee"/>
+    <rect id="terra-100" inkscape:label="terra-100 #f9e2d5" x="90"  y="260" width="60" height="60" rx="6" fill="#f9e2d5"/>
+    <rect id="terra-200" inkscape:label="terra-200 #f0c3a8" x="160" y="260" width="60" height="60" rx="6" fill="#f0c3a8"/>
+    <rect id="terra-300" inkscape:label="terra-300 #e29f76" x="230" y="260" width="60" height="60" rx="6" fill="#e29f76"/>
+    <rect id="terra-400" inkscape:label="terra-400 #d17e50" x="300" y="260" width="60" height="60" rx="6" fill="#d17e50"/>
+    <rect id="terra-500" inkscape:label="terra-500 #b8653a" x="370" y="260" width="60" height="60" rx="6" fill="#b8653a"/>
+    <rect id="terra-600" inkscape:label="terra-600 #9c5030" x="440" y="260" width="60" height="60" rx="6" fill="#9c5030"/>
+    <rect id="terra-700" inkscape:label="terra-700 #7a3d26" x="510" y="260" width="60" height="60" rx="6" fill="#7a3d26"/>
+    <rect id="terra-800" inkscape:label="terra-800 #5c2e1d" x="580" y="260" width="60" height="60" rx="6" fill="#5c2e1d"/>
+    <rect id="terra-900" inkscape:label="terra-900 #402115" x="650" y="260" width="60" height="60" rx="6" fill="#402115"/>
+  </g>
+
+  <!-- ========== WARM GRAY ========== -->
+  <g inkscape:label="Warm grays" id="warmgray">
+    <rect id="gray-50"  inkscape:label="gray-50  #f7f5f3" x="20"  y="340" width="60" height="60" rx="6" fill="#f7f5f3"/>
+    <rect id="gray-100" inkscape:label="gray-100 #ebe7e2" x="90"  y="340" width="60" height="60" rx="6" fill="#ebe7e2"/>
+    <rect id="gray-200" inkscape:label="gray-200 #d6cfc7" x="160" y="340" width="60" height="60" rx="6" fill="#d6cfc7"/>
+    <rect id="gray-300" inkscape:label="gray-300 #b8afa4" x="230" y="340" width="60" height="60" rx="6" fill="#b8afa4"/>
+    <rect id="gray-400" inkscape:label="gray-400 #9c9184" x="300" y="340" width="60" height="60" rx="6" fill="#9c9184"/>
+    <rect id="gray-500" inkscape:label="gray-500 #817669" x="370" y="340" width="60" height="60" rx="6" fill="#817669"/>
+    <rect id="gray-600" inkscape:label="gray-600 #685e53" x="440" y="340" width="60" height="60" rx="6" fill="#685e53"/>
+    <rect id="gray-700" inkscape:label="gray-700 #504840" x="510" y="340" width="60" height="60" rx="6" fill="#504840"/>
+    <rect id="gray-800" inkscape:label="gray-800 #3a3430" x="580" y="340" width="60" height="60" rx="6" fill="#3a3430"/>
+    <rect id="gray-900" inkscape:label="gray-900 #282422" x="650" y="340" width="60" height="60" rx="6" fill="#282422"/>
+  </g>
+
+  <!-- ========== NAVY ========== -->
+  <g inkscape:label="Navies" id="navy">
+    <rect id="navy-50"  inkscape:label="navy-50  #f0f2f8" x="20"  y="420" width="60" height="60" rx="6" fill="#f0f2f8"/>
+    <rect id="navy-100" inkscape:label="navy-100 #d8dde9" x="90"  y="420" width="60" height="60" rx="6" fill="#d8dde9"/>
+    <rect id="navy-200" inkscape:label="navy-200 #b0bad4" x="160" y="420" width="60" height="60" rx="6" fill="#b0bad4"/>
+    <rect id="navy-300" inkscape:label="navy-300 #8a9ab4" x="230" y="420" width="60" height="60" rx="6" fill="#8a9ab4"/>
+    <rect id="navy-400" inkscape:label="navy-400 #5c6f94" x="300" y="420" width="60" height="60" rx="6" fill="#5c6f94"/>
+    <rect id="navy-500" inkscape:label="navy-500 #3d5078" x="370" y="420" width="60" height="60" rx="6" fill="#3d5078"/>
+    <rect id="navy-600" inkscape:label="navy-600 #2a3654" x="440" y="420" width="60" height="60" rx="6" fill="#2a3654"/>
+    <rect id="navy-700" inkscape:label="navy-700 #1e2a44" x="510" y="420" width="60" height="60" rx="6" fill="#1e2a44"/>
+    <rect id="navy-800" inkscape:label="navy-800 #141c30" x="580" y="420" width="60" height="60" rx="6" fill="#141c30"/>
+    <rect id="navy-900" inkscape:label="navy-900 #0e1525" x="650" y="420" width="60" height="60" rx="6" fill="#0e1525"/>
+  </g>
+</svg>
