@@ -4,6 +4,8 @@ import ProductCard from '../components/ProductCard.astro';
 import ContentCard from '../components/ContentCard.astro';
 import { getCollection } from 'astro:content';
 
+const base = import.meta.env.BASE_URL;
+
 const products = (await getCollection('products', ({ data }) => data.published && data.featured))
   .sort((a, b) => a.data.order - b.data.order);
 
@@ -26,7 +28,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.published !=
       I've been the person drowning in platforms that don't fit. Now I create the alternative.
     </p>
     <div class="mt-10 flex flex-wrap gap-4">
-      <a href="/services/" class="px-6 py-3 bg-accent text-bg rounded-lg font-medium hover:opacity-90 transition-opacity duration-300">
+      <a href={`${base}services/`} class="px-6 py-3 bg-accent text-bg rounded-lg font-medium hover:opacity-90 transition-opacity duration-300">
         Need a website?
       </a>
       <a href="https://ladyaudrey.github.io/Forest/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-accent text-accent rounded-lg font-medium hover:bg-accent hover:text-bg transition-all duration-300">
@@ -45,7 +47,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.published !=
           <ProductCard
             title={product.data.title}
             description={product.data.description}
-            href={`/products/${product.slug}/`}
+            href={`${base}products/${product.slug}/`}
             logo={product.data.logo}
             status={product.data.status}
             pricing={product.data.pricing}
@@ -65,7 +67,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.published !=
           <ContentCard
             title={post.data.title}
             description={post.data.description}
-            href={`/blog/${post.slug}/`}
+            href={`${base}blog/${post.slug}/`}
             date={post.data.date}
             tags={post.data.tags}
           />

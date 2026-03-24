@@ -53,7 +53,7 @@ const otherServices = allServices.filter(s => s.data.tier !== 'starter' && s.dat
     <p class="mt-3 text-text-secondary max-w-xl">
       Every project is different. If these don't quite fit, let's talk — I'd rather build something that actually works for you than squeeze you into a box.
     </p>
-    <a href="/contact/" class="mt-6 inline-block px-6 py-3 border border-accent text-accent rounded-lg font-medium hover:bg-accent hover:text-bg transition-all duration-300">
+    <a href={`${import.meta.env.BASE_URL}contact/`} class="mt-6 inline-block px-6 py-3 border border-accent text-accent rounded-lg font-medium hover:bg-accent hover:text-bg transition-all duration-300">
       Reach out &rarr;
     </a>
   </section>

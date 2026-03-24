@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="About — AnEvergreene Studio" description="The philosophy behind AnEvergreene Studio.">
@@ -34,8 +35,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </p>
 
     <p>
-      Right now, that means <a href="/products/">products</a> like
-      <a href="/products/yournest/">YourNest</a>, <a href="/services/">services</a> for
+      Right now, that means <a href={`${base}products/`}>products</a> like
+      <a href={`${base}products/yournest/`}>YourNest</a>, <a href={`${base}services/`}>services</a> for
       people who want a beautiful site without the technical headache, and this blog
       where the thinking happens out loud.
     </p>
@@ -43,7 +44,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>Get in touch</h2>
 
     <p>
-      If any of this resonates, <a href="/contact/">reach out</a>. Whether you want a website,
+      If any of this resonates, <a href={`${base}contact/`}>reach out</a>. Whether you want a website,
       want to collaborate, or just want to say hi — the door's open.
     </p>
   </article>
