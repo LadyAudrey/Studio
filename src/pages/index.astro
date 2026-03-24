@@ -62,7 +62,7 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.published !=
     <section class="py-12">
       <!-- TODO: Restore "All posts →" link once there are 2+ blog posts -->
       <h2 class="text-2xl font-heading font-semibold mb-8">Latest thoughts</h2>
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class={recentPosts.length === 1 ? "" : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3"}>
         {recentPosts.map((post) => (
           <ContentCard
             title={post.data.title}
