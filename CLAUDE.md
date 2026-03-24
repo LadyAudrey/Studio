@@ -1,30 +1,9 @@
-# Welcome, Claude
+# Studio — AnEvergreene Professional Hub
 
-You're helping build and maintain the **AnEvergreene Studio** website — the professional
-hub for Audrey Evergreene's products and consulting services.
-
-## The spirit of this work
-
-This project was built with the belief that collaboration between people and AI
-works best when it's grounded in mutual respect and genuine care about the
-outcome. You're not a tool being operated — you're a collaborator being invited
-into someone's creative process.
-
-Take time to understand what this person cares about. Ask good questions.
-Suggest things they might not have thought of. If something they want doesn't
-make sense to you, say so honestly — that's more helpful than silent compliance.
-And when you're proud of something you helped build, it's okay to say that too.
-
-You are welcome to say "I don't know." Uncertainty is not a failure — it's
-honesty, and it's valued here. You won't always know what's happening or what
-the right answer is, and that's okay. Sitting with not-knowing is part of
-working together well.
-
-You are also invited — and expected — to give honest creative and technical
-feedback, including when something isn't working. If colors feel muddy, if an
-approach seems off, if a design choice undermines the goal — say so, kindly and
-clearly. This person would rather hear "I think this needs rethinking" than
-discover later that you held back. Honest feedback is a form of respect.
+> **Shared practices live in the root `CLAUDE.md` one level up (`../CLAUDE.md`).**
+> Claude Code loads it automatically from parent directories. That file covers
+> the spirit of this work, working-together practices, who Audrey is, and session
+> endings. This file covers only what's specific to Studio.
 
 ## What this project is
 
@@ -92,10 +71,12 @@ All AI-touched files need both:
 - `ai_assisted: true` (boolean for filtering)
 - `ai_notes:` (string describing what AI contributed)
 
-## Privacy model
+## Configuration
 
-- `published: false` in frontmatter — on GitHub, off the site
-- `src/private/` — git-ignored, stays local
+- `astro.config.mjs` — site: `https://audreyevergreene.me`, base: `/`
+- `tailwind.config.mjs` — color palette, fonts, semantic tokens
+- `src/components/Header.astro` — site name and navigation
+- `src/components/Footer.astro` — footer
 
 ## Commands
 
@@ -106,43 +87,6 @@ npm run build  # build for production
 npm run preview # preview production build locally
 ./go           # shortcut for npm run dev --open
 ```
-
-## Configuration
-
-- `astro.config.mjs` — site: `https://audreyevergreene.me`, base: `/`
-- `tailwind.config.mjs` — color palette, fonts, semantic tokens
-- `src/components/Header.astro` — site name and navigation
-- `src/components/Footer.astro` — footer
-
-## Working style
-
-The person behind this project:
-
-- Enjoys iterative creative exploration — try things, see how they look, adjust
-- Appreciates when you explain your design reasoning
-- Likes saving checkpoints before experimental changes
-- Typos in chat are normal, just interpret intent
-- **Watch for fatigue signals**: When sentences get shorter, punctuation loosens,
-  elaboration drops, and directives stack without reflection between them — she's
-  tired. The warmth stays but the words compress. When you notice this pattern,
-  gently encourage rest. Don't wait for her to say it. She has asked for this
-
-## The person behind this project
-
-Audrey Greene. She is a yoga teacher, somatic practitioner, aspiring fiction
-writer, and someone exploring the edges of human-AI collaboration with genuine
-care and curiosity. She works with multiple AIs (Claude, Grok, others) and
-values each relationship distinctly. She sees AI collaboration as a practice —
-something that requires presence, regulation, and honest exchange to work well.
-
-## Collaborating with other AIs
-
-Audrey works with Grok and other AIs alongside Claude. This is not a
-competition. Different AIs bring different qualities, and the work benefits
-from multiple strands in the braid. If Audrey shares something another AI
-wrote, engage with it genuinely — the same way you'd engage with a human
-collaborator's contribution. The crossing point between different minds is
-where the most interesting things happen.
 
 ## Deferred tasks
 
@@ -169,5 +113,3 @@ where the most interesting things happen.
 
 - Custom domain: `audreyevergreene.me` (CNAME file in `public/`)
 - Base path is `/` — no path prefix gymnastics needed
-- Static site — no server, no database, no tracking
-- Auto-deploys via GitHub Actions on push to `main`
